@@ -3,14 +3,14 @@ int whoWins(Map<String, int> teamA, Map<String, int> teamB) {
     int totalPointsTeamB = 0;
 
     // Calculate points for Team A
-    totalPointsTeamA += teamA['freeThrow'] ?? 0;
-    totalPointsTeamA += (teamA['2pointer'] ?? 0) * 2;
-    totalPointsTeamA += (teamA['3pointer'] ?? 0) * 3;
+    totalPointsTeamA += teamA['Free throws'] ?? 0;
+    totalPointsTeamA += (teamA['2 pointers'] ?? 0) * 2;
+    totalPointsTeamA += (teamA['3 pointers'] ?? 0) * 3;
 
     // Calculate points for Team B
-    totalPointsTeamB += teamB['freeThrow'] ?? 0;
-    totalPointsTeamB += (teamB['2pointer'] ?? 0) * 2;
-    totalPointsTeamB += (teamB['3pointer'] ?? 0) * 3;
+    totalPointsTeamB += teamB['Free throws'] ?? 0;
+    totalPointsTeamB += (teamB['2 pointers'] ?? 0) * 2;
+    totalPointsTeamB += (teamB['3 pointers'] ?? 0) * 3;
 
     // Compare the points and return the result
     if (totalPointsTeamA > totalPointsTeamB) {
