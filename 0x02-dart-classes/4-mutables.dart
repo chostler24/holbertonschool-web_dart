@@ -6,7 +6,7 @@ class Password {
     }
 
     String toString() {
-        return "Your password is: $_password";
+        return "Your Password is: $_password";
     }
 
     String get password {
