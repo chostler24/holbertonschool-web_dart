@@ -1,0 +1,30 @@
+class Password {
+    String _password = '';
+
+  String get password => _password;
+
+  set password(String password) {
+    _password = password;
+  }
+
+    bool isValid() {
+        if (_password.length >= 8) {
+            if (_password.length <= 16) {
+                if (_password.contains(RegExp(r'[0-9]'))) {
+                    if (_password.contains(RegExp(r'[a-z]'))) {
+                        if (_password.contains(RegExp(r'[A-Z]'))) {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
+
+    @override
+    String toString() {
+        return "Your password is: $_password";
+    }
+}
