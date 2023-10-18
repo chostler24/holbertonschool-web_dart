@@ -1,11 +1,21 @@
 class Password {
     String _password = '';
 
-  String get password => _password;
+    Password({required String password}) {
+        _password = password;
+    }
 
-  set password(String password) {
-    _password = password;
-  }
+    String toString() {
+        return "Your password is: $_password";
+    }
+
+    String get password {
+        return _password;
+    }
+
+    set password(String newPassword) {
+        _password = newPassword;
+    }
 
     bool isValid() {
         if (_password.length >= 8) {
@@ -22,9 +32,7 @@ class Password {
 
         return false;
     }
-
-    @override
-    String toString() {
-        return "Your Password is: $_password";
-    }
 }
+
+
+
